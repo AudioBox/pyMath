@@ -1,8 +1,10 @@
 def integerFactors(maxNum):
 
-    for i in range(1, maxNum + 1):
-        factors = [x for x in range(1, maxNum + 1) if maxNum % x == 0]
-
+    factors = []
+    for i in range(1,maxNum+1):
+           if maxNum % i == 0:
+               factors.append(i)
+               
     i = 2
     primeFactors = []
     for num in range(1, maxNum + 1):
