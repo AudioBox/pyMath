@@ -1,4 +1,4 @@
-def divisors(maxNum):
+def integerFactors(maxNum):
 
     for i in range(1, maxNum + 1):
         factors = [x for x in range(1, maxNum + 1) if maxNum % x == 0]
@@ -19,4 +19,4 @@ def divisors(maxNum):
 
 number = int(input("Number to be factored: "))
 
-divisors(number)
+integerFactors(number)

@@ -1,15 +1,18 @@
-maxNum = int(input("Max value: "))
-order = str(input("Order [y/n]: "))
+def factorSorter(maxNum, order):
 
+    factors = []
 
-factors = []
+    for i in range(1,maxNum+1):
+        a = [x for x in range(1,maxNum+1) if i % x == 0]
+        factors.append(a)
 
-for num in range(1,maxNum+1):
-    a = [x for x in range(1,maxNum+1) if num % x == 0]
-    factors.append(a)
+    if order == "y":
+        factors = sorted(factors, key=len)
 
-if order == "y":
-    factors = sorted(factors, key=len)
+    for array in factors:
+        print(array)
 
-for array in factors:
-    print(array)
+maxVal = int(input("Max value: "))
+orderVal = str(input("Order [y/n]: "))
+
+factorSorter(maxVal, orderVal)
